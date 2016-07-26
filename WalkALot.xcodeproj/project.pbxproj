@@ -15,6 +15,8 @@
 		150004831D43E95600DE786E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 150004811D43E95600DE786E /* LaunchScreen.storyboard */; };
 		1500048E1D43E95600DE786E /* WalkALotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1500048D1D43E95600DE786E /* WalkALotTests.m */; };
 		150004991D43E95600DE786E /* WalkALotUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 150004981D43E95600DE786E /* WalkALotUITests.m */; };
+		150004AD1D43EAFA00DE786E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150004AC1D43EAFA00DE786E /* HealthKit.framework */; };
+		150004B11D43EB4C00DE786E /* HealthKitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 150004B01D43EB4C00DE786E /* HealthKitManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		150004941D43E95600DE786E /* WalkALotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalkALotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		150004981D43E95600DE786E /* WalkALotUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WalkALotUITests.m; sourceTree = "<group>"; };
 		1500049A1D43E95600DE786E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		150004AC1D43EAFA00DE786E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		150004AE1D43EAFA00DE786E /* WalkALot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WalkALot.entitlements; sourceTree = "<group>"; };
+		150004AF1D43EB4C00DE786E /* HealthKitManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HealthKitManager.h; path = ../HealthKitManager.h; sourceTree = "<group>"; };
+		150004B01D43EB4C00DE786E /* HealthKitManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HealthKitManager.m; path = ../HealthKitManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				150004AD1D43EAFA00DE786E /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +88,7 @@
 		150004671D43E95500DE786E = {
 			isa = PBXGroup;
 			children = (
+				150004AC1D43EAFA00DE786E /* HealthKit.framework */,
 				150004721D43E95500DE786E /* WalkALot */,
 				1500048C1D43E95600DE786E /* WalkALotTests */,
 				150004971D43E95600DE786E /* WalkALotUITests */,
@@ -101,13 +109,12 @@
 		150004721D43E95500DE786E /* WalkALot */ = {
 			isa = PBXGroup;
 			children = (
+				150004AE1D43EAFA00DE786E /* WalkALot.entitlements */,
+				150004A81D43E97600DE786E /* Controller */,
+				150004A71D43E97000DE786E /* View */,
+				150004A61D43E96300DE786E /* Model */,
 				150004761D43E95500DE786E /* AppDelegate.h */,
 				150004771D43E95500DE786E /* AppDelegate.m */,
-				150004791D43E95500DE786E /* ViewController.h */,
-				1500047A1D43E95600DE786E /* ViewController.m */,
-				1500047C1D43E95600DE786E /* Main.storyboard */,
-				1500047F1D43E95600DE786E /* Assets.xcassets */,
-				150004811D43E95600DE786E /* LaunchScreen.storyboard */,
 				150004841D43E95600DE786E /* Info.plist */,
 				150004731D43E95500DE786E /* Supporting Files */,
 			);
@@ -138,6 +145,34 @@
 				1500049A1D43E95600DE786E /* Info.plist */,
 			);
 			path = WalkALotUITests;
+			sourceTree = "<group>";
+		};
+		150004A61D43E96300DE786E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				150004AF1D43EB4C00DE786E /* HealthKitManager.h */,
+				150004B01D43EB4C00DE786E /* HealthKitManager.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		150004A71D43E97000DE786E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1500047C1D43E95600DE786E /* Main.storyboard */,
+				1500047F1D43E95600DE786E /* Assets.xcassets */,
+				150004811D43E95600DE786E /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		150004A81D43E97600DE786E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				150004791D43E95500DE786E /* ViewController.h */,
+				1500047A1D43E95600DE786E /* ViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +242,12 @@
 				TargetAttributes = {
 					1500046F1D43E95500DE786E = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 8893228X4A;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					150004881D43E95600DE786E = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -272,6 +313,7 @@
 			files = (
 				1500047B1D43E95600DE786E /* ViewController.m in Sources */,
 				150004781D43E95500DE786E /* AppDelegate.m in Sources */,
+				150004B11D43EB4C00DE786E /* HealthKitManager.m in Sources */,
 				150004751D43E95500DE786E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,7 +455,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WalkALot/WalkALot.entitlements;
 				INFOPLIST_FILE = WalkALot/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "github.com-tirathpatel.WalkALot";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -424,7 +468,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WalkALot/WalkALot.entitlements;
 				INFOPLIST_FILE = WalkALot/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "github.com-tirathpatel.WalkALot";
 				PRODUCT_NAME = "$(TARGET_NAME)";
