@@ -89,37 +89,3 @@
 }
 
 @end
-
-/*- (void)readDailyStepCountForDate:(NSDate*)date {
- 
- NSCalendar *calendar = [NSCalendar currentCalendar];
- 
- NSDate *now = date;
- 
- NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:now];
- 
- NSDate *startDate = [calendar dateFromComponents:components];
- 
- NSDate *endDate = [calendar dateByAddingUnit:NSCalendarUnitDay value:1 toDate:startDate options:0];
- 
- HKSampleType *sampleType = [HKSampleType quantityTypeForIdentifier:HKQuantityTypeIdentifierStepCount];
- NSPredicate *predicate = [HKQuery predicateForSamplesWithStartDate:startDate endDate:endDate options:HKQueryOptionNone];
- 
- HKSampleQuery *query = [[HKSampleQuery alloc] initWithSampleType:sampleType predicate:predicate limit:HKObjectQueryNoLimit sortDescriptors:nil resultsHandler:^(HKSampleQuery *query, NSArray *results, NSError *error) {
- if (!results) {
- NSLog(@"An error occured fetching the user's tracked food. In your app, try to handle this gracefully. The error was: %@.", error);
- abort();
- }
- 
- dispatch_async(dispatch_get_main_queue(), ^{
- 
- for (HKQuantitySample *sample in results) {
- double joules = [sample.quantity doubleValueForUnit:[HKUnit countUnit]];
- NSLog(@"%f", joules);
- }
- });
- }];
- 
- [self.healthStore executeQuery:query];
- 
- }*/

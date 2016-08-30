@@ -17,6 +17,7 @@
 		150004991D43E95600DE786E /* WalkALotUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 150004981D43E95600DE786E /* WalkALotUITests.m */; };
 		150004AD1D43EAFA00DE786E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150004AC1D43EAFA00DE786E /* HealthKit.framework */; };
 		150004B11D43EB4C00DE786E /* HealthKitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 150004B01D43EB4C00DE786E /* HealthKitManager.m */; };
+		158B93DA1D750D4D007ECE51 /* UserDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 158B93D91D750D4D007ECE51 /* UserDataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		150004AE1D43EAFA00DE786E /* WalkALot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WalkALot.entitlements; sourceTree = "<group>"; };
 		150004AF1D43EB4C00DE786E /* HealthKitManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HealthKitManager.h; path = ../HealthKitManager.h; sourceTree = "<group>"; };
 		150004B01D43EB4C00DE786E /* HealthKitManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HealthKitManager.m; path = ../HealthKitManager.m; sourceTree = "<group>"; };
+		158B93D81D750D4D007ECE51 /* UserDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDataManager.h; path = ../UserDataManager.h; sourceTree = "<group>"; };
+		158B93D91D750D4D007ECE51 /* UserDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDataManager.m; path = ../UserDataManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +114,8 @@
 			children = (
 				150004AE1D43EAFA00DE786E /* WalkALot.entitlements */,
 				150004A81D43E97600DE786E /* Controller */,
-				150004A71D43E97000DE786E /* View */,
 				150004A61D43E96300DE786E /* Model */,
+				150004A71D43E97000DE786E /* View */,
 				150004761D43E95500DE786E /* AppDelegate.h */,
 				150004771D43E95500DE786E /* AppDelegate.m */,
 				150004841D43E95600DE786E /* Info.plist */,
@@ -152,6 +155,8 @@
 			children = (
 				150004AF1D43EB4C00DE786E /* HealthKitManager.h */,
 				150004B01D43EB4C00DE786E /* HealthKitManager.m */,
+				158B93D81D750D4D007ECE51 /* UserDataManager.h */,
+				158B93D91D750D4D007ECE51 /* UserDataManager.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1500047B1D43E95600DE786E /* ViewController.m in Sources */,
+				158B93DA1D750D4D007ECE51 /* UserDataManager.m in Sources */,
 				150004781D43E95500DE786E /* AppDelegate.m in Sources */,
 				150004B11D43EB4C00DE786E /* HealthKitManager.m in Sources */,
 				150004751D43E95500DE786E /* main.m in Sources */,
@@ -542,6 +548,7 @@
 				1500049F1D43E95600DE786E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		150004A01D43E95600DE786E /* Build configuration list for PBXNativeTarget "WalkALotTests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +557,7 @@
 				150004A21D43E95600DE786E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		150004A31D43E95600DE786E /* Build configuration list for PBXNativeTarget "WalkALotUITests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +566,7 @@
 				150004A51D43E95600DE786E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
