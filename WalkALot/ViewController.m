@@ -70,9 +70,13 @@
                                              completion:^(HKQuantity *quantity, NSError *error) {
                                                  if (!quantity) {
                                                      NSLog(@"Error loading step count");
+                                                     self.currentStepCount = 0;
+                                                     dispatch_async(dispatch_get_main_queue(), ^{
+                                                         [self updateView];
+                                                     });
                                                      return;
                                                  }
-                                                 self.currentStepCount = [quantity doubleValueForUnit:unit];//[NSNumber numberWithDouble:[quantity doubleValueForUnit:unit]];
+                                                 self.currentStepCount = [quantity doubleValueForUnit:unit];
                                                  dispatch_async(dispatch_get_main_queue(), ^{
                                                      [self updateView];
                                                  });
